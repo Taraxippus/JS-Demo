@@ -165,7 +165,7 @@ function syncCheckBox(id, object, attribute, valTrue, valFalse)
 	
 	var box = document.getElementById(id);
 	var checked = getCookie("settings." + id);
-	if (checked == undefined)
+	if (checked == '')
 		checked = object[attribute] == valTrue;
 	else
 		object[attribute] = checked ? valTrue : valFalse;
