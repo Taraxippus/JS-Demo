@@ -130,6 +130,7 @@ function onLoadMinigame()
 	window.addEventListener("keydown", onKeyDown, true);
 	window.addEventListener("keyup", onKeyUp, true);
 	
+	allowLevelEditor = getCookie("allowLevelEditor") == "true";
 	document.getElementById('levelEditorMessage').style.display = allowLevelEditor ? 'inline-block' : 'none';
 	syncCheckBox('drawVignette', this, 'drawVignette');
 	syncCheckBox('drawLights', this, 'drawLights');
@@ -163,15 +164,18 @@ function syncCheckBox(id, object, attribute, valTrue, valFalse)
 		valFalse = false;
 	
 	var box = document.getElementById(id);
-	box.checked = object[attribute] == valTrue;
+	var checked = getCookie("settings." + id);
+	if (checked == undefined)
+		checked = object[attribute] == valTrue;
+	else
+		object[attribute] = checked ? valTrue : valFalse;
+
+	box.checked = checked;
 	box.onchange = function()
 	{
-		if (box.checked)
-			object[attribute] = valTrue;
-		else
-			object[attribute] = valFalse;
+		object[attribute] = box.checked ? valTrue : valFalse;
 		
-		setCookie(id, box.checked);
+		setCookie("settings." + id, box.checked, 365);
 		onResize();
 	}
 }
@@ -184,10 +188,12 @@ function togglePause()
 	hasDrawnPause = false;
 }
 
-// Unused; This minigame used to be part of a larger php project
 function exit()
 {
-	document.getElementById(levelIndex >= 4 ? 'minigameFormKey' : 'minigameForm').submit();
+	// This minigame used to be part of a larger php project
+
+	//document.getElementById(levelIndex >= 4 ? 'minigameFormKey' : 'minigameForm').submit();
+	location.href = "https://github.com/Taraxippus/taraxippus.github.io";
 }
 
 function loadLevel(levelIndex1)
@@ -3755,6 +3761,7 @@ function onKeyDown(event)
 		if (levelIndex == levels.length - 1)
 		{
 			allowLevelEditor = true;
+			setCookie("allowLevelEditor", true, 365);
 			document.getElementById('levelEditorMessage').display = 'inline-block';
 		}
 	}
