@@ -168,9 +168,10 @@ function syncCheckBox(id, object, attribute, valTrue, valFalse)
 	if (checked == '')
 		checked = object[attribute] == valTrue;
 	else
-		object[attribute] = checked ? valTrue : valFalse;
+		object[attribute] = checked == 'true' ? valTrue : valFalse;
 
-	box.checked = checked;
+	// I hate javascript and it's unclear type system
+	box.checked = checked == 'true';
 	box.onchange = function()
 	{
 		object[attribute] = box.checked ? valTrue : valFalse;
