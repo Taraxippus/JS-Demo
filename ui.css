@@ -1,0 +1,126 @@
+button:hover
+{
+    background-color: inherit;
+}
+
+button
+{
+    display: inline-block;
+
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    
+    padding: 0px;
+}
+
+a:link, a:visited
+{    
+    color: #AA4400;
+    font-size: 16px; 
+    font-weight: bold;   
+}
+
+a, button
+{
+	transition: text-shadow 0.25s ease-out;
+}
+
+a:hover, button:hover
+{
+	text-shadow: 0px 0px 4px #AA4400; 
+}
+
+.levelEditorLink:link
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #666666;
+}
+
+
+.levelEditorLink:visited
+{
+	color: #666666;
+}
+
+.levelEditorLink:hover, .levelEditorLink:active, .menuButton:hover
+{
+	text-shadow: 0px 1px #AAAAAA;
+}
+
+#levelEditor 
+{
+	position: absolute;
+	display: none;
+	
+	top: 8px;
+	bottom: 8px;
+	right: 8px;
+	width: 25%;
+	padding: 8px;
+	
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+	
+	font-size: 18px;
+	font-family: "Courier New";
+	text-align: center;
+	color: #888888;
+	overflow: auto;
+}	
+
+#menu
+{
+	position: absolute;
+	display: none;
+
+	left: 27.5%;
+	right: 27.5%;
+	top: 50%;
+	width: auto;
+
+	padding-left: 16px;
+	padding-right: 16px;
+
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+	
+	font-size: 18px;
+	font-family: "Courier New";
+	color: #888888;
+}
+
+#menuTitle
+{
+	font-size: 32px;
+	margin: 8px;
+	font-weight: bold;
+	text-align: center;
+}	
+
+.menuButton
+{
+	margin: 8px;
+	margin-bottom: 16px;
+}
+
+fieldset
+{
+	border: 1px solid #2797BC;
+	margin-bottom: 8px;
+}
+
+legend
+{
+	font-weight: bold;
+}
+
+#minigameCanvas
+{
+	display: block;	
+}

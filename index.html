@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+	<head lang="en">
+		<title>Blocks</title>
+
+		<meta charset="utf-8" >
+		<meta name="author" content="Jakob Goes">
+		<meta http-equiv="content type" content="text/html; charset=utf-8">
+
+		<link rel="stylesheet" type="text/css" href="ui.css">
+
+		<script src='jumpAndRun.js'></script>
+		<script src='level/level1.js'></script>
+		<script src='level/level2.js'></script>
+		<script src='level/level3.js'></script>
+		<script src='level/level4.js'></script>
+		<script src='level/level5.js'></script>
+		<script src='level/level6.js'></script>
+		<script src='level/level7.js'></script>
+		<script src='level/level8.js'></script>
+
+		<!-- <script src='minigame/level/debugLevel.js'></script> -->
+			 
+	</head>
+	<body style="margin: 0;">
+	<div style='position: fixed; top: 0px; height: 100%'>
+				<center>
+					<canvas id='minigameCanvas' width='1000' height='600' >Canvas not supported</canvas>
+				</center>
+				<div id='levelEditor'></div>
+				<div id='menu'>
+					<p id='menuTitle'>Menu</p>
+					<fieldset>
+					  <legend>Graphic Settings</legend>
+					  	<input type='checkbox' id='drawVignette'>
+						<label for='drawVignette'>Draw Vignette</label>
+						<br>
+						
+						<input type='checkbox' id='drawLights'>
+						<label for='drawLights'>Draw Lights</label>
+						<br>
+
+						<input type='checkbox' id='drawBloom'>
+						<label for='drawBloom'>Draw Bloom</label>
+						<br>
+						
+						<input type='checkbox' id='drawParticles'>
+						<label for='drawParticles'>Draw Background Effect</label>
+						<br>
+						<br>
+
+						<input type='checkbox' id='scale'>
+						<label for='scale'>Low resolution</label>
+						
+						<input type='checkbox' id='fps'>
+						<label for='fps'>Show FPS</label>
+					</fieldset>
+					<fieldset>
+					  <legend>Help</legend>
+					  Use WSAD, Arrow Keys, Space or Touch to move.<br>
+					  You can switch to a highlighted box with 'E'.
+					  Restart a level with 'R'.
+					  <p id='levelEditorMessage'>You've unlocked the level Editor.<br>Press '#' or '^'!</p>
+					</fieldset>
+					<!-- This was originally a minigame in a larger php project -->
+					<button class='menuButton' onclick='exit();'>Exit Game</button>
+					<button class='menuButton' style='position: absolute; right: 16px;' onclick='togglePause();'>Resume</button>
+				</div>
+			</div>
+			
+			<script>onLoadMinigame();</script>
+	</body>
+</html>
