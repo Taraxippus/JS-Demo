@@ -1037,7 +1037,7 @@ function drawLevelTransition(timer, partial)
 
 			context.font = "bold " + Math.floor(canvas.height * 0.05) + "px Arial";
 			context.fillStyle = "rgba(0, 204, 255, " + animationTimer2 + ")";
-			context.fillText("v1.0 Jakob Goes", canvas.width * 0.5, (0.75 - 0.15 * animationTimer1) * canvas.height);
+			context.fillText("v1.0", canvas.width * 0.5, (0.75 - 0.15 * animationTimer1) * canvas.height);
 				
 			context.font = "bold " + Math.floor(scale * 0.05) + "px Arial";
 			context.textAlign = "left";
