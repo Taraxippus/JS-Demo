@@ -710,6 +710,7 @@ function update(timestep)
 		if (levelIndex == levels.length - 1)
 		{
 			allowLevelEditor = true;
+			setCookie("allowLevelEditor", "true", 365);
 			document.getElementById('levelEditorMessage').style.display = 'inline-block';
 		}
 	}
@@ -3762,8 +3763,8 @@ function onKeyDown(event)
 		if (levelIndex == levels.length - 1)
 		{
 			allowLevelEditor = true;
-			setCookie("allowLevelEditor", true, 365);
-			document.getElementById('levelEditorMessage').display = 'inline-block';
+			setCookie("allowLevelEditor", "true", 365);
+			document.getElementById('levelEditorMessage').style.display = 'inline-block';
 		}
 	}
 	
