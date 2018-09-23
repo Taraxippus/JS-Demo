@@ -710,7 +710,7 @@ function update(timestep)
 		if (levelIndex == levels.length - 1)
 		{
 			allowLevelEditor = true;
-			document.getElementById('levelEditorMessage').display = 'inline-block';
+			document.getElementById('levelEditorMessage').style.display = 'inline-block';
 		}
 	}
 }
