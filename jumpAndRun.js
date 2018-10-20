@@ -2218,8 +2218,8 @@ function Box(x, y, width, height, mass, ghostParent)
 	else
 		boxes.push(this);
 
-	this.frictionX = 0.9995;
-	this.frictionY = 0.9995;
+	this.frictionX = 0.99;
+	this.frictionY = 0.99;
 	this.bouncynessX = 0.01;
 	this.bouncynessY = 0.01;
 		
