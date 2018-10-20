@@ -24,7 +24,7 @@ var whiteUI = true;
 var drawVignette = false;
 var displayFPS = false;
 
-var timestep = 1000 / 60.0, maxTimestep = 1000 / 120.0;
+var timestep = 1000 / 120.0, maxTimestep = 1000 / 120.0;
 var delta = 0, lastTimestamp = 0, ghostLevelTime = 0, levelTimeGhost = 0, levelTime = 0, lifeTime = 0, animationTime = 0;
 var fps = 0, frames = 0, fpsTimer = 0;
 
@@ -2218,8 +2218,8 @@ function Box(x, y, width, height, mass, ghostParent)
 	else
 		boxes.push(this);
 
-	this.frictionX = 0.95;
-	this.frictionY = 0.95;
+	this.frictionX = 0.9995;
+	this.frictionY = 0.9995;
 	this.bouncynessX = 0.01;
 	this.bouncynessY = 0.01;
 		
