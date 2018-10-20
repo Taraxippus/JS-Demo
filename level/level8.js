@@ -31,7 +31,7 @@ levels.push(
 		new Box(0.7, 1, 0.1, 0.1, 10).moveBetween(0.7, 1, 1.7, 1, 0, 6);
 		new Box(1.5, 0.5, 0.1, 0.1, 10).moveBetween(1.5, 0.5, 2, 0, 0, 5);
 		new Box(3.25, -0.5, 0.25, 0.05, 10).moveBetween(3.25, -0.5, 3.25, 0.75, 0, 10);
-		new Box(2.125, 0, 1, 0.05, 10).setPhysicsAttributes(1.05, 0.95, 0.01, 0.01).moveBetween(2.125, 0, 2.125, 1.5, 0, 10, "1", true);
+		new Box(2.125, 0, 1, 0.05, 10).setPhysicsAttributes(1.01, 0.99, 0.01, 0.01).moveBetween(2.125, 0, 2.125, 1.5, 0, 10, "1", true);
 
 		new Triangle(4, 0.65);
 		new Triangle(1.55, 0.7);
