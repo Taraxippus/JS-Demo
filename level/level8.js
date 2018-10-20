@@ -22,7 +22,7 @@ levels.push(
 		new Box(-0.0375, 1.2125, 0.075, 0.075, 1).makePlayable();
 		new Box(1.7625, 0, 0.075, 0.075, 1).makePlayable();
 
-		new Box(2.5, 0.1, 0.1, 0.1, 3).setPhysicsAttributes(0.95, 0.95, 1, 0.01);
+		new Box(2.5, 0.1, 0.1, 0.1, 3).setPhysicsAttributes(0.9995, 0.9995, 1, 0.01);
 		new Box(3.55, 0.5, 0.5, 0.05);
 		new Box(1.75, -0.125, 0.1, 0.1);
 		new Box(-0.05, 0.5, 0.1, 0.1, 10).moveBetween(-0.05, 0.5, -0.05, 1, 0, 4);
